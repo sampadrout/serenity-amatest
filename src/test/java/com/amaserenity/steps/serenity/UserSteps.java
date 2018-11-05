@@ -193,7 +193,8 @@ public class UserSteps extends ScenarioSteps {
 
     @Step
     public void successfully_update_firstname() {
-        myAccountScreen.isFirstNameUpdated();
+        myAccountScreen.tapBusinessCard();
+        businessCardScreen.isFirstNameUpdated();
     }
 
     @Step

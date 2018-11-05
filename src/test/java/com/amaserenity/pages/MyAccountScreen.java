@@ -25,8 +25,8 @@ public class MyAccountScreen extends PageObject {
         element(businessCard).waitUntilClickable().click();
     }
 
-    public void isFirstNameUpdated() {
-        element(firstNameText).waitUntilVisible();
-        element(firstNameText).getText().contains("FirstNameUpdated");
-    }
+//    public void isFirstNameUpdated() {
+////        element(firstNameText).waitUntilVisible();
+//        element(firstNameText).getText().contains("FirstNameUpdated Test5");
+//    }
 }

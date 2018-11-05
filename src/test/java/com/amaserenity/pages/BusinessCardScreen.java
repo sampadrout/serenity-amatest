@@ -29,5 +29,11 @@ public class BusinessCardScreen extends PageObject {
 
     public void tapSave() {
         element(save).waitUntilClickable().click();
+
+    }
+
+    public void isFirstNameUpdated() {
+        element(firstName).waitUntilVisible();
+        element(firstName).getText().contains("FirstNameUpdated");
     }
 }
