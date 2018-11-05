@@ -11,6 +11,12 @@ public class SettingsScreen extends PageObject {
     @FindBy(xpath = "//*[@text='Settings']")
     private WebElementFacade settings;
 
+    @FindBy(xpath = "//*[@text='Joining Options']")
+    private WebElementFacade joiningOptions;
+
+    @FindBy(xpath = "//*[@text='My Account']")
+    private WebElementFacade myAccountSetting;
+
     @FindBy(xpath = "//*[@text='Sign Out']")
     private WebElementFacade signOut;
 
@@ -19,6 +25,14 @@ public class SettingsScreen extends PageObject {
 
     public void isSettingsScreenShown() {
         element(settings).waitUntilVisible();
+    }
+
+    public void tapJoiningOptionSetting() {
+        element(joiningOptions).waitUntilClickable().click();
+    }
+
+    public void tapMyAccountSetting() {
+        element(myAccountSetting).waitUntilClickable().click();
     }
 
     public void tapSignout() {

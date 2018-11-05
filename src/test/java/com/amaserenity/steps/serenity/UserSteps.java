@@ -1,12 +1,7 @@
 package com.amaserenity.steps.serenity;
 
 import com.amaserenity.model.UserAccount;
-import com.amaserenity.pages.LoginScreen;
-import com.amaserenity.pages.CalendarScreen;
-import com.amaserenity.pages.ContactsScreen;
-import com.amaserenity.pages.TutorialScreen;
-import com.amaserenity.pages.MainScreen;
-import com.amaserenity.pages.SettingsScreen;
+import com.amaserenity.pages.*;
 
 import net.thucydides.core.steps.ScenarioSteps;
 import net.thucydides.core.annotations.Step;
@@ -21,6 +16,10 @@ public class UserSteps extends ScenarioSteps {
     TutorialScreen tutorialScreen;
     MainScreen mainScreen;
     SettingsScreen settingsScreen;
+    JoiningOptionsScreen joiningOptionsScreen;
+    WebinarScreen webinarScreen;
+    MyAccountScreen myAccountScreen;
+    BusinessCardScreen businessCardScreen;
 
     @Step
     public void opens_login_screen() {
@@ -110,6 +109,91 @@ public class UserSteps extends ScenarioSteps {
     @Step
     public void navigates_to_settings_screen() {
         settingsScreen.isSettingsScreenShown();
+    }
+
+    @Step
+    public void taps_on_joining_options() {
+        settingsScreen.tapJoiningOptionSetting();
+    }
+
+    @Step
+    public void navigates_to_joining_options_screen() {
+        joiningOptionsScreen.isJoiningOptionsScreenShown();
+    }
+
+    @Step
+    public void taps_on_webinars_setting() {
+        joiningOptionsScreen.tapWebinars();
+    }
+
+    @Step
+    public void navigates_to_webinars_screen() {
+        webinarScreen.isWebinarsScreenShown();
+    }
+
+    @Step
+    public void taps_on_add_webinar() {
+        webinarScreen.tapAddWebinar();
+    }
+
+    @Step
+    public void navigates_to_add_webinar_screen() {
+        webinarScreen.isAddWebinarScreenShown();
+    }
+
+    @Step
+    public void enters_webinar_name() {
+        webinarScreen.enterWebinrName();
+    }
+
+    @Step
+    public void enters_webinar_url() {
+        webinarScreen.enterURL();
+    }
+
+    @Step
+    public void taps_to_save_webinar() {
+        webinarScreen.tapSave();
+    }
+
+    @Step
+    public void successfully_saved_webinar() {
+        webinarScreen.isWebinarSaved();
+    }
+
+    @Step
+    public void taps_on_my_account() {
+        settingsScreen.tapMyAccountSetting();
+    }
+
+    @Step
+    public void navigates_to_my_account_screen() {
+        myAccountScreen.isMyAccountScreenShown();
+    }
+
+    @Step
+    public void taps_on_business_card() {
+        myAccountScreen.tapBusinessCard();
+    }
+
+    @Step
+    public void navigates_to_business_card_screen() {
+        businessCardScreen.isBusinessCardScreenShown();
+    }
+
+    @Step
+    public void updates_first_name() {
+        businessCardScreen.enterFirstName();
+    }
+
+    @Step
+    public void taps_on_save_business_card() {
+        businessCardScreen.tapSave();
+    }
+
+    @Step
+    public void successfully_update_firstname() {
+        myAccountScreen.isFirstNameUpdated();
     }
 
     @Step

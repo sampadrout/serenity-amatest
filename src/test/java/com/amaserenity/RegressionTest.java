@@ -15,11 +15,12 @@ import static com.amaserenity.utils.AppiumServer.stopAppiumServer;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features = "src/test/resources/features/login.feature"
+		features = "src/test/resources/features/updatebusinesscard.feature"
 //		glue = "com.amaserenity.steps.LoginScenarioSteps"
+//      tags = {"~@skip"}
 		)
 
-public class LogInandLogOut {
+public class RegressionTest {
 	
 /*	This is to manage webdriver instance by serenity */
 	
