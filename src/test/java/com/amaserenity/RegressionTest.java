@@ -15,7 +15,7 @@ import static com.amaserenity.utils.AppiumServer.stopAppiumServer;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features = "src/test/resources/features/updatebusinesscard.feature"
+		features = "src/test/resources/features/"
 //		glue = "com.amaserenity.steps.LoginScenarioSteps"
 //      tags = {"~@skip"}
 		)
